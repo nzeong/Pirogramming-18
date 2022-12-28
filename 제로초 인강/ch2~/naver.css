@@ -13,15 +13,32 @@
 }
 
 #header-search h1{
-    width: 280px;
+    width: 198px;
+    height: 48px;
     display: inline-block;
+    background: url(./sp_search.png) -4px -10px no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
 }
+
+#header-search h1 span{
+    display: none;
+}
+
+#header-search a{
+    text-decoration: none;
+}
+
 
 #header-search h2{
     display: none;
 }
 
 #header-search fieldset{
-    width: 520px;
+    margin-left: 20px;
+    padding: 12px 0 12px 10px;
+    width: 521px;
+    height: 49px;
     display: inline-block;
+    border: 2px solid #01cf5d;
 }
