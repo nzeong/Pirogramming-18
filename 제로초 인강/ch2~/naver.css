@@ -18,7 +18,7 @@
     display: inline-block;
     background: url(./sp_search.png) -4px -10px no-repeat;
     text-indent: 100%;
-    overflow: hidden;
+    vertical-align: middle;
 }
 
 #header-search h1 span{
@@ -41,4 +41,12 @@
     height: 49px;
     display: inline-block;
     border: 2px solid #01cf5d;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+#header-search fieldset input{
+    border: none;
+    padding: 0;
+    outline: none;
 }
