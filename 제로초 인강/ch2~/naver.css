@@ -107,3 +107,14 @@ nav li:nth-child(3) span:first-child{
     display: inline-block;
     margin: 14px;
 }  
+
+#header-top{
+    float: right;
+}
+
+#header-top span{
+    color:#888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px
+}
