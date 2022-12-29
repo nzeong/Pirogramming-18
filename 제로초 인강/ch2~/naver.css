@@ -17,6 +17,11 @@ html, body{
     width: 1080px;
 }
 
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6;
+}
+
 nav li{
     display: inline-block;
 }
@@ -46,6 +51,11 @@ nav li:nth-child(3) span:first-child{
     background-position: -100px -182px;
 }
 
+nav ul{
+    margin: 0;
+    padding: 16px 0 0 4px;
+    list-style: none;
+}
 
 #header-search h1{
     width: 198px;
@@ -117,4 +127,12 @@ nav li:nth-child(3) span:first-child{
     letter-spacing: -1px;
     font-size: 11px;
     line-height: 22px
+}
+
+header{
+    height: 170px;
+}
+
+.relative {
+    position: relative;
 }
