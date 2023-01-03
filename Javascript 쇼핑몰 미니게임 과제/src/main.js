@@ -1,12 +1,23 @@
 
 function loadItems(){
-    return fetch('data/json')
+    return fetch('data/data.json')
     .then(response => response.json()) // data 성공적이면 json으로 반환
     .then(json => json.items); // json 안의 items 반환
 }
 
+function displayItems(items){
+    const container = document.querySelector('.items');
+    container.innerHTML = items.map(item => createHTMLString(item)).join('');
+}
 
-
+function createHTMLString(item){
+    return `
+    <li class="item">
+        <img src="${item.image}" alt="${item.type}" class="item__thumnail">
+        <span class="item_description">${item.gender}, ${item.size}</span>
+    </li>
+    `;
+}
 
 loadItems()
 .then(items => {
