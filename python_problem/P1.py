@@ -18,6 +18,8 @@ def player_play():
         global num
         num += 1
         printing_number('player')
+        if num == 31:
+            break        
 
 
 def computer_play():
@@ -34,6 +36,8 @@ def computer_play():
         global num
         num += 1
         printing_number('computer')
+        if num == 31:
+            break        
 
 
 
@@ -41,4 +45,12 @@ def printing_number(name):
     print(name,num)
 
 
+while(True):
 
+    computer_play()
+    if num == 31:
+        break
+
+    player_play()
+    if num == 31:
+        break
