@@ -19,6 +19,7 @@ def player_play():
         num += 1
         printing_number('player')
         if num == 31:
+            print('computer win!')
             break        
 
 
@@ -37,6 +38,7 @@ def computer_play():
         num += 1
         printing_number('computer')
         if num == 31:
+            print('computer win!')
             break        
 
 
