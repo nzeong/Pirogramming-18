@@ -1,0 +1,46 @@
+header{
+	padding: 10px 10px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a{
+	text-decoration: none;
+	color:lightsteelblue;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.title a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.info, .content{
+
+    background-color: lightgray;
+    padding: 10px 10px 10px 10px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+
+}
+
+.infoc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

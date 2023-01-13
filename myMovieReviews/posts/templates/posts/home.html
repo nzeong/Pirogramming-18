@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 화면</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+</head>
+<body>
+    <header>
+        <a href="/">my Movie reviews</a>
+        <a href="/create">리뷰작성</a>
+    </header>
+
+    <div class="lists">
+    {% for post in posts %}
+    <div class="inside">
+        <a href="/post/{{post.id}}">{{post.title}}</a>
+        <p>개봉년도 {{post.year}}년</p>
+        <p>장르 {{post.genre}}</p>
+        <p>별점 {{post.star}}점</p>
+    </div>
+    {% endfor %}
+    </div>
+    <footer>
+       
+    </footer>
+
+</body>
+</html>

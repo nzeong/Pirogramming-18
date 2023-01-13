@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상세 화면</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}" />
+  </head>
+
+  <body>
+
+    <header> 
+      <a href="/">my Movie reviews</a>
+      <a href="/create">리뷰작성</a>
+    </header>
+
+    <div class="form">
+
+      <div class="title">
+        <h2>{{post.title}}</h2>
+        <div><a href="/update/{{post.id}}">수정 </a>
+        <a href="/delete/{{post.id}}">| 삭제</a></div>
+      </div>
+
+      <div class="infoc">
+      <div class="info">
+        <p>개봉 연도 : {{post.year}}년</p>
+        <p>장르 : {{post.genre}}</p>
+        <p>별점 : {{post.star}}점</p>
+        <p>감독 : {{post.director}}</p>
+        <p>주연 배우 : {{post.actor}}</p>
+        <p>러닝 타임 : {{post.running}}분</p>
+      </div>
+
+      <div class="content">{{post.review}}</div>
+    </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+.review_input{
+	display: flex;
+	flex-direction: column;
+}
+
+.review_input div{
+	margin-bottom: 15px;
+}
+
+.forms{
+	background-color: lightgray;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+}
+
+.form{
+	width: 70%;
+	display: center;
+}
+.forms h2{
+	padding-bottom: 15px;
+	border-bottom: solid 1px;
+	text-align: center;
+}
+
+.review_textarea{
+	width: 100%;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+	padding: 10px 10px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header a{
+	text-decoration: none;
+	color:lightsteelblue;
+	font-size: 25px;
+	font-weight: bold;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수정</title>
+    <link rel="stylesheet" href="{% static 'css/update.css' %}" />
+  </head>
+  <body>
+    <header>
+        <a href="/">my Movie reviews</a>
+        <a href="/create">리뷰작성</a>
+    </header>
+
+    
+    <div class="body">
+    <div class="forms">
+    <form action="/update/{{post.id}}" method="post" class="hi">
+
+      {% csrf_token %}
+      <h2>Movie review</h2>
+
+      <div class="review_input">
+        <div>
+            제목 :
+            <input type="text" name="title"  value="{{post.title}}"/> 
+        </div>
+
+        <div>
+            개봉년도 :
+            <input type="number" name="year" value="{{post.year}}" /> 
+        </div>
+
+        <div>
+            장르 :
+            <input type="text" name="genre" value="{{post.genre}}" /> 
+        </div>
+
+        <div>
+            별점:
+            <input type="number" name="star" value="{{post.star}}" /> 
+        </div>
+
+        <div>
+            감독 :
+            <input type="text" name="director"  value="{{post.director}}" /> 
+        </div>
+
+        <div>
+            배우 :
+            <input type="text" name="actor" value="{{post.actor}}" /> 
+        </div>
+
+        <div>
+            러닝타임 :
+            <input type="number" name="running" value="{{post.running}}"  />
+        </div>
+
+        <div>
+            리뷰 : <br>
+            <textarea name="review" id="" cols="30" rows="10" class="review_textarea">{{post.review}}</textarea>
+        </div>
+
+        <div style="margin-left: 90%;">
+            <input type="submit" value="저장" />
+        </div>
+
+     </div>
+
+    </form>
+    </div>
+    </div>
+
+
+  </body>
+</html>
