@@ -36,6 +36,16 @@ def detail(request, id):
     return render(request, template_name="idea/detail.html", context=context)
 
 def update(request, id):
+    idea = Idea.objects.get(id=id)
+    context = {
+        "idea":idea
+    }
+    
+    if request.FILES.get("image"):
+        idea.image = request.FILES["image"]
+    if request.POST.get("check"):
+        idea.image = None
+        
     if request.method == 'POST':
         title = request.POST["title"]
         image = request.FILES["image"]
@@ -43,13 +53,12 @@ def update(request, id):
         interest = request.POST["interest"]
         devtool = request.POST["devtool"]
         
+
+        
         Idea.objects.filter(id=id).update(title=title, image=image, content=content, interest=interest, devtool=devtool)
         return redirect(f"/idea/{id}")
     
-    idea = Idea.objects.get(id=id)
-    context = {
-        "idea":idea
-    }
+
     
     return render(request, template_name="idea/update.html", context=context)
 
