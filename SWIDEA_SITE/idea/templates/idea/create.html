@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새로 작성</title>
+</head>
+<body>
+    <form action="/create" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>아이디어명: <input type="text" name="title"></p>
+
+    <input type="file" name="image" />
+    
+    <div>
+    <p>아이디어 설명: </p>
+    <textarea name="content" cols="30" rows="10"></textarea>
+    </div>
+
+    <p>아이디어 관심도: <input type="number" name="interest"></p>
+    <p>예상 개발툴: 
+        <select name="devtool" id="devtool">
+            <option value="django">django</option>
+            <option value="react">react</option>
+            <option value="Spring">Spring</option>
+            <option value="Node.js">Node.js</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+        </select>
+    </p>
+    <div>
+        <input type="submit" value="SUBMIT">
+    </div>
+    </form>
+
+    <script>
+        $(document).ready(function(){
+            $("select[name=devtool]").change(function () {
+            $("#devtool").submit();
+            });
+        });
+    </script>
+</body>
+</html>

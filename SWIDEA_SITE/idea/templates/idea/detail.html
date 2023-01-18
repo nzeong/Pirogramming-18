@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세 화면</title>
+</head>
+<body>
+    <h1>Idea Detail</h1>
+    <h2>{{idea.title}}</h2>
+    {% if idea.image %}
+    <p>
+        <img src="{{ idea.image.url }}" height="200" width="300"/>
+    </p>
+    {% endif %}
+    <p>1)아이디어 관심도</br>{{idea.interest}}</p>
+    <p>2)예상 개발 툴</br>{{idea.devtool}}</p>
+    <p>3)아이디어 설명</br>{{idea.content}}</p>
+
+    <div>수정하기 : <a href="/update/{{idea.id}}">수정</a></div>
+    <div>삭제하기 : <a href="/delete/{{idea.id}}">삭제</a></div>
+    <div>홈 화면 : <a href="/">목록</a></div>
+</body>
+</html>
+

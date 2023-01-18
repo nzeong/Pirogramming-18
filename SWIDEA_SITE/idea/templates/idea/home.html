@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idea-main</title>
+</head>
+<body>
+    <h1>Idea List</h1>
+
+
+    {% for idea in idea %}
+    <div>
+        {% if idea.image %}
+        <p>
+            <img src="{{ idea.image.url }}" height="200" width="300"/>
+        </p>
+        {% endif %}
+        <h1><a href="/idea/{{idea.id}}"> {{idea.title}} </a></h1>
+        <p>예상 개발 툴 : {{idea.devtool}}</p>
+        <p>아이디어 관심도 : {{idea.interest}}</p>
+    </div>
+    {% endfor %}
+
+    <a href="/create">생성하기</a>
+</body>
+</html>

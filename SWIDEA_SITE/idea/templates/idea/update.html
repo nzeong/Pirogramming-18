@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수정</title>
+</head>
+<body>
+    <form action="/update/{{idea.id}}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>아이디어명: <input type="text" name="title" value="{{idea.title}}"></p>
+
+    Change: <input type="file" name="image" />
+    
+    <div>
+    <p>아이디어 설명: </p>
+    <textarea name="content" cols="30" rows="10">{{idea.content}}</textarea>
+    </div>
+    <p>아이디어 관심도: <input type="number" name="interest" value="{{idea.interest}}"></p>
+    <p>예상 개발툴: <input type="text" name="devtool" value="{{idea.devtool}}"></p>
+    <div>
+        <input type="submit" value="SUBMIT">
+    </div>
+    </form>
+</body>
+</html>
