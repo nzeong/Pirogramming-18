@@ -1,7 +1,6 @@
 # 👾 Pirogramming-18 👾
 
 ### 📌 피로그래밍 18기 활동 기록
-#### 😀 자세한 후기는 [여기](https://nicemooji.tistory.com/32)에
 #
 
 
